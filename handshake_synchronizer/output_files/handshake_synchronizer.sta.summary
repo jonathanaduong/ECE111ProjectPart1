@@ -1,0 +1,113 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 900mV 100C Model Setup 'dest_clk'
+Slack : -0.797
+TNS   : -17.112
+
+Type  : Slow 900mV 100C Model Setup 'sender_fsm:sender_fsm_inst|data_out_en'
+Slack : -0.212
+TNS   : -3.784
+
+Type  : Slow 900mV 100C Model Setup 'src_clk'
+Slack : 0.194
+TNS   : 0.000
+
+Type  : Slow 900mV 100C Model Hold 'sender_fsm:sender_fsm_inst|data_out_en'
+Slack : -0.050
+TNS   : -0.050
+
+Type  : Slow 900mV 100C Model Hold 'src_clk'
+Slack : 0.299
+TNS   : 0.000
+
+Type  : Slow 900mV 100C Model Hold 'dest_clk'
+Slack : 0.349
+TNS   : 0.000
+
+Type  : Slow 900mV 100C Model Minimum Pulse Width 'src_clk'
+Slack : -2.846
+TNS   : -65.285
+
+Type  : Slow 900mV 100C Model Minimum Pulse Width 'dest_clk'
+Slack : -2.846
+TNS   : -60.512
+
+Type  : Slow 900mV 100C Model Minimum Pulse Width 'sender_fsm:sender_fsm_inst|data_out_en'
+Slack : 0.478
+TNS   : 0.000
+
+Type  : Slow 900mV -40C Model Setup 'dest_clk'
+Slack : -0.672
+TNS   : -12.960
+
+Type  : Slow 900mV -40C Model Setup 'sender_fsm:sender_fsm_inst|data_out_en'
+Slack : -0.265
+TNS   : -5.684
+
+Type  : Slow 900mV -40C Model Setup 'src_clk'
+Slack : 0.229
+TNS   : 0.000
+
+Type  : Slow 900mV -40C Model Hold 'sender_fsm:sender_fsm_inst|data_out_en'
+Slack : 0.054
+TNS   : 0.000
+
+Type  : Slow 900mV -40C Model Hold 'dest_clk'
+Slack : 0.270
+TNS   : 0.000
+
+Type  : Slow 900mV -40C Model Hold 'src_clk'
+Slack : 0.289
+TNS   : 0.000
+
+Type  : Slow 900mV -40C Model Minimum Pulse Width 'src_clk'
+Slack : -2.846
+TNS   : -65.377
+
+Type  : Slow 900mV -40C Model Minimum Pulse Width 'dest_clk'
+Slack : -2.846
+TNS   : -60.496
+
+Type  : Slow 900mV -40C Model Minimum Pulse Width 'sender_fsm:sender_fsm_inst|data_out_en'
+Slack : 0.443
+TNS   : 0.000
+
+Type  : Fast 900mV -40C Model Setup 'dest_clk'
+Slack : -0.217
+TNS   : -3.129
+
+Type  : Fast 900mV -40C Model Setup 'sender_fsm:sender_fsm_inst|data_out_en'
+Slack : 0.224
+TNS   : 0.000
+
+Type  : Fast 900mV -40C Model Setup 'src_clk'
+Slack : 0.592
+TNS   : 0.000
+
+Type  : Fast 900mV -40C Model Hold 'src_clk'
+Slack : 0.126
+TNS   : 0.000
+
+Type  : Fast 900mV -40C Model Hold 'sender_fsm:sender_fsm_inst|data_out_en'
+Slack : 0.133
+TNS   : 0.000
+
+Type  : Fast 900mV -40C Model Hold 'dest_clk'
+Slack : 0.182
+TNS   : 0.000
+
+Type  : Fast 900mV -40C Model Minimum Pulse Width 'src_clk'
+Slack : -2.846
+TNS   : -28.821
+
+Type  : Fast 900mV -40C Model Minimum Pulse Width 'dest_clk'
+Slack : -2.846
+TNS   : -26.891
+
+Type  : Fast 900mV -40C Model Minimum Pulse Width 'sender_fsm:sender_fsm_inst|data_out_en'
+Slack : 0.471
+TNS   : 0.000
+
+------------------------------------------------------------
