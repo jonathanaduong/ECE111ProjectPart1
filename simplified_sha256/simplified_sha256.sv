@@ -1,4 +1,4 @@
-module simplified_sha256 #(parameter integer NUM_OF_WORDS = 20)(
+ module simplified_sha256 #(parameter integer NUM_OF_WORDS = 20)(
  input logic  clk, reset_n, start,
  input logic  [15:0] message_addr, output_addr,
  output logic done, mem_clk, mem_we,
@@ -7,7 +7,15 @@ module simplified_sha256 #(parameter integer NUM_OF_WORDS = 20)(
  input logic [31:0] mem_read_data);
 
 // FSM state variables 
-enum logic [2:0] {IDLE, READ, BLOCK, COMPUTE, WRITE} state;
+enum logic [2:0] {
+	IDLE = 3'b000,
+	READ1 = 3'b001,
+	READ2 = 3'b010,
+	READ3 = 3'b011,
+	BLOCK = 3'b100, 
+	COMPUTE = 3'b101, 
+	WRITE = 3'b110
+} state;
 
 // NOTE : Below mentioned frame work is for reference purpose.
 // Local variables might not be complete and you might have to add more variables
@@ -47,9 +55,7 @@ assign tstep = (i - 1);
 // Note : Function defined are for reference purpose. Feel free to add more functions or modify below.
 // Function to determine number of blocks in memory to fetch
 function logic [15:0] determine_num_blocks(input logic [31:0] size);
-
-  // Student to add function implementation
-
+	determine_num_blocks = (size + 15) / 16;
 endfunction
 
 
@@ -61,11 +67,11 @@ begin
     S1 = rightrotate(e, 6) ^ rightrotate(e, 11) ^ rightrotate(e, 25);
     // Student to add remaning code below
     // Refer to SHA256 discussion slides to get logic for this function
-    ch = 
-    t1 = 
-    S0 = 
-    maj = 
-    t2 = 
+    ch = (e & f) ^ (~e & g);
+    t1 = h + S1 + ch + k[t] + w[t];
+    S0 = rightrotate(a,2) ^ rightrotate(a,13) ^ rightrotate(a,22);
+    maj = (a & b) ^ (a & c) ^ (b & c);
+    t2 = S0 + maj;
     sha256_op = {t1 + t2, a, b, c, d + t1, e, f, g};
 end
 endfunction
@@ -108,31 +114,65 @@ begin
     // Initialize hash values h0 to h7 and a to h, other variables and memory we, address offset, etc
     IDLE: begin 
        if(start) begin
-       // Student to add rest of the code  
-
-
-
-
+       // Student to add rest of the code
+			a <= h0 <= 32'h6a09e667;
+			b <= h1 <= 32'hbb67ae85;
+			c <= h2 <= 32'h3c6ef372;
+			d <= h3 <= 32'ha54ff53a;
+			e <= h4 <= 32'h510e527f;
+			f <= h5 <= 32'h9b05688c;			
+			g <= h6 <= 32'h1f83d9ab;			
+			h <= h7 <= 32'h5be0cd19;
+			i <= 1;
+			j <= 0;
+			cur_we <= 0;
+			offset <= 0;
+			state <= READ2;
        end
+		 else begin
+			state <= IDLE;
+		 end
     end
-
+	 READ1: begin
+		cur_we <= 0;
+		offset++;
+		if(offset < 20) begin
+			state <= READ2;
+		end
+		else begin
+			for(int i = 0; i < 20; i++) begin
+				w[i] = message[i];
+			end
+			state <= BLOCK;
+		end
+	 end
+	 READ2: begin
+		state <= READ3;
+	 end
+	 READ3: begin
+		message[offset] <= mem_read_data;
+		state <= READ1;
+	 end
     // SHA-256 FSM 
     // Get a BLOCK from the memory, COMPUTE Hash output using SHA256 function    
     // and write back hash value back to memory
     BLOCK: begin
 	// Fetch message in 512-bit block size
 	// For each of 512-bit block initiate hash value computation
-       
-
-
-
-   
-
-
-
-
-    
-
+		if(j < num_blocks) begin
+			a <= h0;
+			b <= h1;
+			c <= h2;
+			d <= h3;
+			e <= h4;
+			f <= h5;			
+			g <= h6;			
+			h <= h7;
+			state <= COMPUTE;
+		end
+		else begin
+			state <= WRITE;
+		end
     end
 
     // For each block compute hash function
@@ -140,23 +180,38 @@ begin
     // there are still number of message blocks available in memory otherwise
     // move to WRITE stage
     COMPUTE: begin
-	// 64 processing rounds steps for 512-bit block 
-        if (i <= 64) begin
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        end
+	// 64 processing rounds steps for 512-bit block
+		logic [31:0] s1, s0;
+		logic [255:0] abcdefgh;
+		if (i <= 64) begin
+			if (tstep < 16) begin
+				wt[tstep] <= w[tstep];
+			end
+			else begin
+				s0 <= rightrotate(wt[tstep-15], 7) ^ rightrotate(wt[tstep-15], 18) ^ (wt[tstep-15] >> 3);
+				s1 <= rightrotate(wt[tstep-2], 17) ^ rightrotate(wt[tstep-2], 19) ^ (wt[tstep-2] >> 10);
+				wt[tstep] <= wt[tstep-16]+s0+wt[tstep-7]+s1;
+			end
+			abcdefgh = sha256_op(a,b,c,d,e,f,g,h,wt,tstep);
+			a <= abcdefgh[255:224];
+			b <= abcdefgh[223:192];
+			c <= abcdefgh[191:160];
+			d <= abcdefgh[159:128];
+			e <= abcdefgh[127:96];
+			f <= abcdefgh[95:64];
+			g <= abcdefgh[63:32];
+			h <= abcdefgh[31:0];
+			i++;
+		end
+		h0 <= h0 + a;
+		h1 <= h1 + b;
+		h2 <= h2 + c;
+		h3 <= h3 + d;
+		h4 <= h4 + e;
+		h5 <= h5 + f;			
+		h6 <= h6 + g;			
+		h7 <= h7 + h;
+		state <= BLOCK;
     end
 
     // h0 to h7 each are 32 bit hashes, which makes up total 256 bit value
