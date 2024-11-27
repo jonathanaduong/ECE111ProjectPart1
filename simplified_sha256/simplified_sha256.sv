@@ -218,9 +218,14 @@ begin
     // h0 to h7 after compute stage has final computed hash value
     // write back these h0 to h7 to memory starting from output_addr
     WRITE: begin
-   
-
-
+		if(offset < 8)begin
+			cur_write_data <= h[offset+1];
+			offset <= offset + 1;
+			state <= WRITE;
+		end
+		else begin
+		state <= IDLE;
+		end
     end
    endcase
   end
