@@ -1,4 +1,4 @@
-module simplified_sha256 #(parameter integer NUM_OF_WORDS = 20)(
+module working_file #(parameter integer NUM_OF_WORDS = 20)(
  input logic  clk, reset_n, start,
  input logic  [15:0] message_addr, output_addr,
  output logic done, mem_clk, mem_we,

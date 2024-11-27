@@ -9,12 +9,12 @@
 // FSM state variables 
 enum logic [2:0] {
 	IDLE = 3'b000,
-	READ = 3'b001,
-	BLOCK = 3'b010, 
-	COMPUTE = 3'b011, 
-	WRITE = 3'b100,
-	BUFFER = 3'b101,
-	REST = 3'b110
+	READ1 = 3'b001,
+	READ2 = 3'b010, 
+	BLOCK = 3'b011, 
+	COMPUTE = 3'b100,
+	WRITE1 = 3'b101,
+	WRITE2 = 3'b110
 } state;
 
 // NOTE : Below mentioned frame work is for reference purpose.
@@ -23,7 +23,7 @@ enum logic [2:0] {
 
 // Local variables
 logic [31:0] w[64];
-logic [31:0] message[20];
+logic [31:0] message[32];
 logic [31:0] wt;
 logic [31:0] h0, h1, h2, h3, h4, h5, h6, h7;
 logic [31:0] a, b, c, d, e, f, g, h;
@@ -35,9 +35,7 @@ logic [15:0] cur_addr;
 logic [31:0] cur_write_data;
 logic [512:0] memory_block;
 logic [ 7:0] tstep;
-
-logic [31:0] sha_temp[8];
-logic [15:0] temp_write_addr;
+logic [31:0] houtput[8];
 
 // SHA256 K constants
 parameter int k[0:63] = '{
@@ -51,8 +49,7 @@ parameter int k[0:63] = '{
    32'h748f82ee,32'h78a5636f,32'h84c87814,32'h8cc70208,32'h90befffa,32'ha4506ceb,32'hbef9a3f7,32'hc67178f2
 };
 
-
-assign num_blocks = determine_num_blocks(NUM_OF_WORDS); 
+assign num_blocks = determine_num_blocks(NUM_OF_WORDS);
 assign tstep = (i - 1);
 
 // Note : Function defined are for reference purpose. Feel free to add more functions or modify below.
@@ -67,11 +64,11 @@ function logic [255:0] sha256_op(input logic [31:0] a, b, c, d, e, f, g, h, w,
                                  input logic [7:0] t);
     logic [31:0] S1, S0, ch, maj, t1, t2; // internal signals
 begin
-    S1 = rightrotate(e, 6) ^ rightrotate(e, 11) ^ rightrotate(e, 25);
     // Student to add remaning code below
     // Refer to SHA256 discussion slides to get logic for this function
+	 S1 = rightrotate(e, 6) ^ rightrotate(e, 11) ^ rightrotate(e, 25);
     ch = (e & f) ^ (~e & g);
-    t1 = h + S1 + ch + k[t] + w[t];
+    t1 = h + S1 + ch + k[t] + w;
     S0 = rightrotate(a,2) ^ rightrotate(a,13) ^ rightrotate(a,22);
     maj = (a & b) ^ (a & c) ^ (b & c);
     t2 = S0 + maj;
@@ -79,14 +76,6 @@ begin
 end
 endfunction
 
-function logic [31:0] wi(input logic [31:0] w15, w2, w16, w7);
-	logic [31:0] S1, S0;
-	begin
-		S0 = rightrotate(w15, 7) ^ rightrotate(w15, 18) ^ (w15 >> 3);
-		S1 = rightrotate(w2, 17) ^ rightrotate(w2, 19) ^ (w2 >> 10);
-		wi = w16 + S0 + w7 + S1;
-	end
-endfunction	
 
 // Generate request to memory
 // for reading from memory to get original message
@@ -126,62 +115,60 @@ begin
     IDLE: begin 
        if(start) begin
        // Student to add rest of the code
-			a <= h0 <= 32'h6a09e667;
-			b <= h1 <= 32'hbb67ae85;
-			c <= h2 <= 32'h3c6ef372;
-			d <= h3 <= 32'ha54ff53a;
-			e <= h4 <= 32'h510e527f;
-			f <= h5 <= 32'h9b05688c;			
-			g <= h6 <= 32'h1f83d9ab;			
-			h <= h7 <= 32'h5be0cd19;
+			h0 <= 32'h6a09e667;
+			h1 <= 32'hbb67ae85;
+			h2 <= 32'h3c6ef372;
+			h3 <= 32'ha54ff53a;
+			h4 <= 32'h510e527f;
+			h5 <= 32'h9b05688c;			
+			h6 <= 32'h1f83d9ab;			
+			h7 <= 32'h5be0cd19;
+			a <= 32'h6a09e667;
+			b <= 32'hbb67ae85;
+			c <= 32'h3c6ef372;
+			d <= 32'ha54ff53a;
+			e <= 32'h510e527f;
+			f <= 32'h9b05688c;			
+			g <= 32'h1f83d9ab;			
+			h <= 32'h5be0cd19;
 			i <= 1;
 			j <= 0;
-			//cur_we <= 0;
-			//offset <= 0;
-
 			cur_addr <= message_addr;
-			temp_write_addr <= output_addr;
-			cur_we <= 1'b0;
-			offset <= 16'b0;
-			i <= 8'b0;
-			j <= 8'b0;
-			state <= REST;
+			cur_we <= 0;
+			offset <= 0;
+			state <= READ1;
        end
     end
-
-	REST:begin
-		state <= READ;
-    end 
-	
-	READ: begin
+	 READ1: begin
+		state <= READ2;
+	 end
+	 READ2: begin
 		if(offset < (num_blocks * 16)) begin
-			if(offset < NUM_OF_WORDS) 
-				begin
-					message[offset] <= mem_read_data;
-					offset <= offset + 1;
-					state <= REST;
-				end
+			if(offset < 20) begin
+				message[offset] <= mem_read_data;
+				offset++;
+				state <= READ1;
+			end
 			else begin
-				if(offset == NUM_OF_WORDS) begin
+				if(offset == 20) begin
 					message[offset] <= 32'h80000000;
 				end
 				else if(offset == ((num_blocks * 16)-1)) begin
-					message[offset] <= 32*NUM_OF_WORDS;
+					message[offset] <= 32*20;
 				end
 				else begin
-					message[offset] <= 32'h0;
+					message[offset] <= 0;
 				end
-				offset <= offset + 1;
-				state <= READ;
+				offset++;
+				state <= READ2;
 			end
-		end				
+		end
 		else begin
 			offset <= 0;
-			i <= 0;
-			state <=BLOCK;
+			state <= BLOCK;
 		end
-	end
-
+	 end
+	 
     // SHA-256 FSM 
     // Get a BLOCK from the memory, COMPUTE Hash output using SHA256 function    
     // and write back hash value back to memory
@@ -189,26 +176,29 @@ begin
 	// Fetch message in 512-bit block size
 	// For each of 512-bit block initiate hash value computation
 		if(j < num_blocks) begin
-			if(i<64) begin
-				if(i<16) begin
-					w[i] <= message[i + j*16];
-					i <= i + 1;
+			if (i <= 64) begin
+				if (tstep < 16) begin
+					w[tstep] <= message[tstep+j*16];
+					i++;
 					state <= BLOCK;
 				end
 				else begin
-					w[i] <= wi(w[i-15], w[i-2], w[i-16], w[i-7]);
-					i <= i + 1;
+					w[tstep] <= w[tstep-16] +
+						(rightrotate(w[tstep-15], 7) ^ rightrotate(w[tstep-15], 18) ^ (w[tstep-15] >> 3)) +
+						w[tstep-7] +
+						(rightrotate(w[tstep-2], 17) ^ rightrotate(w[tstep-2], 19) ^ (w[tstep-2] >> 10));
+					i++;
 					state <= BLOCK;
 				end
 			end
 			else begin
-				i <= 0;
-				j <= j + 1;
+				i <= 1;
+				j++;
 				state <= COMPUTE;
 			end
 		end
 		else begin
-			state <= BUFFER;
+			state <= WRITE1;
 		end
     end
 
@@ -218,62 +208,56 @@ begin
     // move to WRITE stage
     COMPUTE: begin
 	// 64 processing rounds steps for 512-bit block
-		logic [31:0] s1, s0;
-		logic [255:0] abcdefgh;
 		if (i <= 64) begin
-			if (tstep < 16) begin
-				wt[tstep] <= w[tstep];
-			end
-			else begin
-				s0 <= rightrotate(wt[tstep-15], 7) ^ rightrotate(wt[tstep-15], 18) ^ (wt[tstep-15] >> 3);
-				s1 <= rightrotate(wt[tstep-2], 17) ^ rightrotate(wt[tstep-2], 19) ^ (wt[tstep-2] >> 10);
-				wt[tstep] <= wt[tstep-16]+s0+wt[tstep-7]+s1;
-			end
-			abcdefgh = sha256_op(a,b,c,d,e,f,g,h,wt,tstep);
-			a <= abcdefgh[255:224];
-			b <= abcdefgh[223:192];
-			c <= abcdefgh[191:160];
-			d <= abcdefgh[159:128];
-			e <= abcdefgh[127:96];
-			f <= abcdefgh[95:64];
-			g <= abcdefgh[63:32];
-			h <= abcdefgh[31:0];
+			{a,b,c,d,e,f,g,h} <= sha256_op(a,b,c,d,e,f,g,h,w[tstep],tstep);
 			i++;
+			state <= COMPUTE;
 		end
-		h0 <= h0 + a;
-		h1 <= h1 + b;
-		h2 <= h2 + c;
-		h3 <= h3 + d;
-		h4 <= h4 + e;
-		h5 <= h5 + f;			
-		h6 <= h6 + g;			
-		h7 <= h7 + h;
-		state <= BLOCK;
+		else begin
+			h0 <= h0 + a;
+			h1 <= h1 + b;
+			h2 <= h2 + c;
+			h3 <= h3 + d;
+			h4 <= h4 + e;
+			h5 <= h5 + f;			
+			h6 <= h6 + g;			
+			h7 <= h7 + h;
+			a <= h0 + a;
+			b <= h1 + b;
+			c <= h2 + c;
+			d <= h3 + d;
+			e <= h4 + e;
+			f <= h5 + f;			
+			g <= h6 + g;			
+			h <= h7 + h;
+			i <= 1;
+			state <= BLOCK;
+		end
     end
-
-	BUFFER:begin
-			sha_temp[0] <= h0;
-			sha_temp[1] <= h1;
-			sha_temp[2] <= h2;
-			sha_temp[3] <= h3;
-			sha_temp[4] <= h4;
-			sha_temp[5] <= h5;
-			sha_temp[6] <= h6;
-			sha_temp[7] <= h7;
-			cur_we <= 1;
-			cur_addr <= temp_write_addr;
-			cur_write_data <= h0;
-			state <= WRITE;
+	
+	 WRITE1: begin
+		houtput[0] <= h0;
+		houtput[1] <= h1;
+		houtput[2] <= h2;
+		houtput[3] <= h3;
+		houtput[4] <= h4;
+		houtput[5] <= h5;			
+		houtput[6] <= h6;			
+		houtput[7] <= h7;
+		cur_we <= 1;
+		cur_addr <= output_addr;
+		cur_write_data <= h0;
+		state <= WRITE2;
 	 end
 
     // h0 to h7 each are 32 bit hashes, which makes up total 256 bit value
     // h0 to h7 after compute stage has final computed hash value
     // write back these h0 to h7 to memory starting from output_addr
-    WRITE: begin
+    WRITE2: begin
 		if(offset < 8)begin
-			cur_write_data <= sha_temp[offset+1];
-			offset <= offset + 1;
-			state <= WRITE;
+			cur_write_data <= houtput[offset+1];
+			offset++;
+			state <= WRITE2;
 		end
 		else begin
 		state <= IDLE;
