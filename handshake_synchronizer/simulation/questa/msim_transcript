@@ -28,7 +28,7 @@
 # Modifying modelsim.ini
 # vlog -vlog01compat -work altera_ver {c:/intelfpga_lite/23.1std/quartus/eda/sim_lib/altera_primitives.v}
 # Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
-# Start time: 14:28:52 on Nov 20,2024
+# Start time: 17:06:17 on Nov 27,2024
 # vlog -reportprogress 300 -vlog01compat -work altera_ver c:/intelfpga_lite/23.1std/quartus/eda/sim_lib/altera_primitives.v 
 # -- Compiling module global
 # -- Compiling module carry
@@ -110,7 +110,7 @@
 # 	alt_iobuf_diff
 # 	alt_bidir_diff
 # 	alt_bidir_buf
-# End time: 14:28:52 on Nov 20,2024, Elapsed time: 0:00:00
+# End time: 17:06:17 on Nov 27,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vlib verilog_libs/lpm_ver
@@ -122,7 +122,7 @@
 # Modifying modelsim.ini
 # vlog -vlog01compat -work lpm_ver {c:/intelfpga_lite/23.1std/quartus/eda/sim_lib/220model.v}
 # Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
-# Start time: 14:28:52 on Nov 20,2024
+# Start time: 17:06:17 on Nov 27,2024
 # vlog -reportprogress 300 -vlog01compat -work lpm_ver c:/intelfpga_lite/23.1std/quartus/eda/sim_lib/220model.v 
 # -- Compiling module LPM_MEMORY_INITIALIZATION
 # -- Compiling module LPM_HINT_EVALUATION
@@ -186,7 +186,7 @@
 # 	lpm_inpad
 # 	lpm_outpad
 # 	lpm_bipad
-# End time: 14:28:52 on Nov 20,2024, Elapsed time: 0:00:00
+# End time: 17:06:17 on Nov 27,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vlib verilog_libs/sgate_ver
@@ -198,7 +198,7 @@
 # Modifying modelsim.ini
 # vlog -vlog01compat -work sgate_ver {c:/intelfpga_lite/23.1std/quartus/eda/sim_lib/sgate.v}
 # Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
-# Start time: 14:28:52 on Nov 20,2024
+# Start time: 17:06:18 on Nov 27,2024
 # vlog -reportprogress 300 -vlog01compat -work sgate_ver c:/intelfpga_lite/23.1std/quartus/eda/sim_lib/sgate.v 
 # -- Compiling module oper_add
 # -- Compiling module oper_addsub
@@ -240,7 +240,7 @@
 # 	oper_decoder
 # 	oper_bus_mux
 # 	oper_latch
-# End time: 14:28:52 on Nov 20,2024, Elapsed time: 0:00:00
+# End time: 17:06:18 on Nov 27,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vlib verilog_libs/altera_mf_ver
@@ -252,7 +252,7 @@
 # Modifying modelsim.ini
 # vlog -vlog01compat -work altera_mf_ver {c:/intelfpga_lite/23.1std/quartus/eda/sim_lib/altera_mf.v}
 # Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
-# Start time: 14:28:52 on Nov 20,2024
+# Start time: 17:06:18 on Nov 27,2024
 # vlog -reportprogress 300 -vlog01compat -work altera_mf_ver c:/intelfpga_lite/23.1std/quartus/eda/sim_lib/altera_mf.v 
 # -- Compiling module lcell
 # -- Compiling module ALTERA_MF_MEMORY_INITIALIZATION
@@ -382,7 +382,7 @@
 # 	alt_fault_injection
 # 	sld_virtual_jtag_basic
 # 	altsource_probe
-# End time: 14:28:52 on Nov 20,2024, Elapsed time: 0:00:00
+# End time: 17:06:18 on Nov 27,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vlib verilog_libs/altera_lnsim_ver
@@ -394,7 +394,7 @@
 # Modifying modelsim.ini
 # vlog -sv -work altera_lnsim_ver {c:/intelfpga_lite/23.1std/quartus/eda/sim_lib/altera_lnsim.sv}
 # Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
-# Start time: 14:28:53 on Nov 20,2024
+# Start time: 17:06:18 on Nov 27,2024
 # vlog -reportprogress 300 -sv -work altera_lnsim_ver c:/intelfpga_lite/23.1std/quartus/eda/sim_lib/altera_lnsim.sv 
 # -- Compiling package altera_lnsim_functions
 # -- Compiling package altera_generic_pll_functions
@@ -477,7 +477,7 @@
 # 	altera_iopll
 # 	fourteennm_altera_iopll
 # 	fourteennm_simple_iopll
-# End time: 14:28:53 on Nov 20,2024, Elapsed time: 0:00:00
+# End time: 17:06:19 on Nov 27,2024, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # 
 # vlib verilog_libs/arriaii_hssi_ver
@@ -489,7 +489,7 @@
 # Modifying modelsim.ini
 # vlog -vlog01compat -work arriaii_hssi_ver {c:/intelfpga_lite/23.1std/quartus/eda/sim_lib/arriaii_hssi_atoms.v}
 # Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
-# Start time: 14:28:53 on Nov 20,2024
+# Start time: 17:06:19 on Nov 27,2024
 # vlog -reportprogress 300 -vlog01compat -work arriaii_hssi_ver c:/intelfpga_lite/23.1std/quartus/eda/sim_lib/arriaii_hssi_atoms.v 
 # -- Compiling module arriaii_hssi_aux_clock_div
 # -- Compiling module arriaii_hssi_aux_clock_mult
@@ -753,7 +753,7 @@
 # 	arriaii_hssi_cmu
 # 	arriaii_hssi_calibration_block
 # 	arriaii_hssi_refclk_divider
-# End time: 14:28:54 on Nov 20,2024, Elapsed time: 0:00:01
+# End time: 17:06:19 on Nov 27,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 129
 # 
 # vlib verilog_libs/arriaii_pcie_hip_ver
@@ -765,7 +765,7 @@
 # Modifying modelsim.ini
 # vlog -vlog01compat -work arriaii_pcie_hip_ver {c:/intelfpga_lite/23.1std/quartus/eda/sim_lib/arriaii_pcie_hip_atoms.v}
 # Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
-# Start time: 14:28:54 on Nov 20,2024
+# Start time: 17:06:20 on Nov 27,2024
 # vlog -reportprogress 300 -vlog01compat -work arriaii_pcie_hip_ver c:/intelfpga_lite/23.1std/quartus/eda/sim_lib/arriaii_pcie_hip_atoms.v 
 # ** Warning: (vlog-2083) c:/intelfpga_lite/23.1std/quartus/eda/sim_lib/arriaii_pcie_hip_atoms.v(28): Carriage return (0x0D) is not followed by a newline (0x0A).
 # ** Warning: (vlog-2083) c:/intelfpga_lite/23.1std/quartus/eda/sim_lib/arriaii_pcie_hip_atoms.v(29): Carriage return (0x0D) is not followed by a newline (0x0A).
@@ -966,7 +966,7 @@
 # 
 # Top level modules:
 # 	arriaii_hssi_pcie_hip
-# End time: 14:28:55 on Nov 20,2024, Elapsed time: 0:00:01
+# End time: 17:06:21 on Nov 27,2024, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 170
 # 
 # vlib verilog_libs/arriaii_ver
@@ -978,7 +978,7 @@
 # Modifying modelsim.ini
 # vlog -vlog01compat -work arriaii_ver {c:/intelfpga_lite/23.1std/quartus/eda/sim_lib/arriaii_atoms.v}
 # Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
-# Start time: 14:28:55 on Nov 20,2024
+# Start time: 17:06:21 on Nov 27,2024
 # vlog -reportprogress 300 -vlog01compat -work arriaii_ver c:/intelfpga_lite/23.1std/quartus/eda/sim_lib/arriaii_atoms.v 
 # -- Compiling UDP ARRIAII_PRIM_DFFE
 # -- Compiling UDP ARRIAII_PRIM_DFFEAS
@@ -1103,7 +1103,7 @@
 # 	arriaii_controller
 # 	arriaii_termination_logic
 # 	arriaii_termination
-# End time: 14:28:55 on Nov 20,2024, Elapsed time: 0:00:00
+# End time: 17:06:21 on Nov 27,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # if {[file exists rtl_work]} {
@@ -1117,100 +1117,79 @@
 # 
 # vlog -sv -work work +incdir+C:/projects/systemverilog/ECE11/ProjectPart1/handshake_synchronizer {C:/projects/systemverilog/ECE11/ProjectPart1/handshake_synchronizer/sender_fsm.sv}
 # Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
-# Start time: 14:28:55 on Nov 20,2024
+# Start time: 17:06:22 on Nov 27,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/projects/systemverilog/ECE11/ProjectPart1/handshake_synchronizer" C:/projects/systemverilog/ECE11/ProjectPart1/handshake_synchronizer/sender_fsm.sv 
 # -- Compiling module sender_fsm
 # 
 # Top level modules:
 # 	sender_fsm
-# End time: 14:28:55 on Nov 20,2024, Elapsed time: 0:00:00
+# End time: 17:06:22 on Nov 27,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/projects/systemverilog/ECE11/ProjectPart1/handshake_synchronizer {C:/projects/systemverilog/ECE11/ProjectPart1/handshake_synchronizer/receiver_fsm.sv}
 # Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
-# Start time: 14:28:55 on Nov 20,2024
+# Start time: 17:06:22 on Nov 27,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/projects/systemverilog/ECE11/ProjectPart1/handshake_synchronizer" C:/projects/systemverilog/ECE11/ProjectPart1/handshake_synchronizer/receiver_fsm.sv 
 # -- Compiling module receiver_fsm
 # 
 # Top level modules:
 # 	receiver_fsm
-# End time: 14:28:55 on Nov 20,2024, Elapsed time: 0:00:00
+# End time: 17:06:22 on Nov 27,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/projects/systemverilog/ECE11/ProjectPart1/handshake_synchronizer {C:/projects/systemverilog/ECE11/ProjectPart1/handshake_synchronizer/handshake_synchronizer.sv}
 # Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
-# Start time: 14:28:55 on Nov 20,2024
+# Start time: 17:06:22 on Nov 27,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/projects/systemverilog/ECE11/ProjectPart1/handshake_synchronizer" C:/projects/systemverilog/ECE11/ProjectPart1/handshake_synchronizer/handshake_synchronizer.sv 
 # -- Compiling module handshake_synchronizer
 # 
 # Top level modules:
 # 	handshake_synchronizer
-# End time: 14:28:55 on Nov 20,2024, Elapsed time: 0:00:00
+# End time: 17:06:22 on Nov 27,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/projects/systemverilog/ECE11/ProjectPart1/handshake_synchronizer {C:/projects/systemverilog/ECE11/ProjectPart1/handshake_synchronizer/flipflop_synchronizer.sv}
 # Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
-# Start time: 14:28:55 on Nov 20,2024
+# Start time: 17:06:22 on Nov 27,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/projects/systemverilog/ECE11/ProjectPart1/handshake_synchronizer" C:/projects/systemverilog/ECE11/ProjectPart1/handshake_synchronizer/flipflop_synchronizer.sv 
 # -- Compiling module flipflop_synchronizer
 # 
 # Top level modules:
 # 	flipflop_synchronizer
-# End time: 14:28:56 on Nov 20,2024, Elapsed time: 0:00:01
+# End time: 17:06:22 on Nov 27,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-# Modified modelsim.ini
-# Modified modelsim.ini
-vlog -reportprogress 300 -work work C:/projects/systemverilog/ECE11/ProjectPart1/handshake_synchronizer/handshake_synchronizer.sv
-# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
-# Start time: 14:29:07 on Nov 20,2024
-# vlog -reportprogress 300 -work work C:/projects/systemverilog/ECE11/ProjectPart1/handshake_synchronizer/handshake_synchronizer.sv 
-# -- Compiling module handshake_synchronizer
-# 
-# Top level modules:
-# 	handshake_synchronizer
-# End time: 14:29:07 on Nov 20,2024, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work C:/projects/systemverilog/ECE11/ProjectPart1/handshake_synchronizer/sender_fsm.sv
-# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
-# Start time: 14:29:07 on Nov 20,2024
-# vlog -reportprogress 300 -work work C:/projects/systemverilog/ECE11/ProjectPart1/handshake_synchronizer/sender_fsm.sv 
-# -- Compiling module sender_fsm
-# 
-# Top level modules:
-# 	sender_fsm
-# End time: 14:29:07 on Nov 20,2024, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work C:/projects/systemverilog/ECE11/ProjectPart1/handshake_synchronizer/receiver_fsm.sv
-# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
-# Start time: 14:29:07 on Nov 20,2024
-# vlog -reportprogress 300 -work work C:/projects/systemverilog/ECE11/ProjectPart1/handshake_synchronizer/receiver_fsm.sv 
-# -- Compiling module receiver_fsm
-# 
-# Top level modules:
-# 	receiver_fsm
-# End time: 14:29:07 on Nov 20,2024, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work C:/projects/systemverilog/ECE11/ProjectPart1/handshake_synchronizer/flipflop_synchronizer.sv
-# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
-# Start time: 14:29:07 on Nov 20,2024
-# vlog -reportprogress 300 -work work C:/projects/systemverilog/ECE11/ProjectPart1/handshake_synchronizer/flipflop_synchronizer.sv 
-# -- Compiling module flipflop_synchronizer
-# 
-# Top level modules:
-# 	flipflop_synchronizer
-# End time: 14:29:07 on Nov 20,2024, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
 vlog -reportprogress 300 -work work C:/projects/systemverilog/ECE11/ProjectPart1/handshake_synchronizer/handshake_synchronizer_testbench.sv
 # Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
-# Start time: 14:29:07 on Nov 20,2024
+# Start time: 17:06:34 on Nov 27,2024
+# vlog -reportprogress 300 -work work C:/projects/systemverilog/ECE11/ProjectPart1/handshake_synchronizer/handshake_synchronizer_testbench.sv 
+# -- Compiling module handshake_synchronizer_testbench
+# ** Error: (vlog-13069) C:/projects/systemverilog/ECE11/ProjectPart1/handshake_synchronizer/handshake_synchronizer_testbench.sv(116): near "end": syntax error, unexpected end, expecting ';'.
+# End time: 17:06:34 on Nov 27,2024, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+vlog -reportprogress 300 -work work C:/projects/systemverilog/ECE11/ProjectPart1/handshake_synchronizer/handshake_synchronizer_testbench.sv
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 17:06:41 on Nov 27,2024
 # vlog -reportprogress 300 -work work C:/projects/systemverilog/ECE11/ProjectPart1/handshake_synchronizer/handshake_synchronizer_testbench.sv 
 # -- Compiling module handshake_synchronizer_testbench
 # 
 # Top level modules:
 # 	handshake_synchronizer_testbench
-# End time: 14:29:07 on Nov 20,2024, Elapsed time: 0:00:00
+# End time: 17:06:41 on Nov 27,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
+# Modified modelsim.ini
+# Modified modelsim.ini
+vlog -reportprogress 300 -work work C:/projects/systemverilog/ECE11/ProjectPart1/handshake_synchronizer/handshake_synchronizer_testbench.sv
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 17:06:52 on Nov 27,2024
+# vlog -reportprogress 300 -work work C:/projects/systemverilog/ECE11/ProjectPart1/handshake_synchronizer/handshake_synchronizer_testbench.sv 
+# -- Compiling module handshake_synchronizer_testbench
+# 
+# Top level modules:
+# 	handshake_synchronizer_testbench
+# End time: 17:06:52 on Nov 27,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Optimization canceled
 vsim -gui -l msim_transcript rtl_work.handshake_synchronizer_testbench -voptargs=+acc
 # vsim -gui -l msim_transcript rtl_work.handshake_synchronizer_testbench -voptargs="+acc" 
-# Start time: 14:29:17 on Nov 20,2024
+# Start time: 17:07:04 on Nov 27,2024
 # ** Note: (vsim-3812) Design is being optimized...
 # ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
 # ** Note: (vopt-143) Recognized 1 FSM in module "sender_fsm(fast)".
@@ -1223,247 +1202,8 @@ vsim -gui -l msim_transcript rtl_work.handshake_synchronizer_testbench -voptargs
 # Loading work.flipflop_synchronizer(fast)
 add wave -position insertpoint sim:/handshake_synchronizer_testbench/DUT/*
 run -all
-vlog -reportprogress 300 -work work C:/projects/systemverilog/ECE11/ProjectPart1/handshake_synchronizer/handshake_synchronizer_testbench.sv
-# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
-# Start time: 14:37:05 on Nov 20,2024
-# vlog -reportprogress 300 -work work C:/projects/systemverilog/ECE11/ProjectPart1/handshake_synchronizer/handshake_synchronizer_testbench.sv 
-# -- Compiling module handshake_synchronizer_testbench
-# 
-# Top level modules:
-# 	handshake_synchronizer_testbench
-# End time: 14:37:05 on Nov 20,2024, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work C:/projects/systemverilog/ECE11/ProjectPart1/handshake_synchronizer/receiver_fsm.sv
-# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
-# Start time: 14:37:05 on Nov 20,2024
-# vlog -reportprogress 300 -work work C:/projects/systemverilog/ECE11/ProjectPart1/handshake_synchronizer/receiver_fsm.sv 
-# -- Compiling module receiver_fsm
-# 
-# Top level modules:
-# 	receiver_fsm
-# End time: 14:37:05 on Nov 20,2024, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work C:/projects/systemverilog/ECE11/ProjectPart1/handshake_synchronizer/sender_fsm.sv
-# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
-# Start time: 14:37:05 on Nov 20,2024
-# vlog -reportprogress 300 -work work C:/projects/systemverilog/ECE11/ProjectPart1/handshake_synchronizer/sender_fsm.sv 
-# -- Compiling module sender_fsm
-# 
-# Top level modules:
-# 	sender_fsm
-# End time: 14:37:05 on Nov 20,2024, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work C:/projects/systemverilog/ECE11/ProjectPart1/handshake_synchronizer/handshake_synchronizer.sv
-# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
-# Start time: 14:37:05 on Nov 20,2024
-# vlog -reportprogress 300 -work work C:/projects/systemverilog/ECE11/ProjectPart1/handshake_synchronizer/handshake_synchronizer.sv 
-# -- Compiling module handshake_synchronizer
-# 
-# Top level modules:
-# 	handshake_synchronizer
-# End time: 14:37:05 on Nov 20,2024, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work C:/projects/systemverilog/ECE11/ProjectPart1/handshake_synchronizer/flipflop_synchronizer.sv
-# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
-# Start time: 14:37:05 on Nov 20,2024
-# vlog -reportprogress 300 -work work C:/projects/systemverilog/ECE11/ProjectPart1/handshake_synchronizer/flipflop_synchronizer.sv 
-# -- Compiling module flipflop_synchronizer
-# 
-# Top level modules:
-# 	flipflop_synchronizer
-# End time: 14:37:05 on Nov 20,2024, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vsim -gui -l msim_transcript -voptargs=+acc rtl_work.handshake_synchronizer_testbench
-# End time: 14:37:12 on Nov 20,2024, Elapsed time: 0:07:55
-# Errors: 0, Warnings: 1
-# vsim -gui -l msim_transcript -voptargs="+acc" rtl_work.handshake_synchronizer_testbench 
-# Start time: 14:37:12 on Nov 20,2024
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
-# ** Note: (vopt-143) Recognized 1 FSM in module "sender_fsm(fast)".
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
-# Loading sv_std.std
-# Loading work.handshake_synchronizer_testbench(fast)
-# Loading work.handshake_synchronizer(fast)
-# Loading work.sender_fsm(fast)
-# Loading work.receiver_fsm(fast)
-# Loading work.flipflop_synchronizer(fast)
-add wave -position insertpoint sim:/handshake_synchronizer_testbench/DUT/*
-run -all
-run -all
-vlog -reportprogress 300 -work work C:/projects/systemverilog/ECE11/ProjectPart1/handshake_synchronizer/handshake_synchronizer.sv
-# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
-# Start time: 14:43:34 on Nov 20,2024
-# vlog -reportprogress 300 -work work C:/projects/systemverilog/ECE11/ProjectPart1/handshake_synchronizer/handshake_synchronizer.sv 
-# -- Compiling module handshake_synchronizer
-# 
-# Top level modules:
-# 	handshake_synchronizer
-# End time: 14:43:34 on Nov 20,2024, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vsim -gui -l msim_transcript -voptargs=+acc rtl_work.handshake_synchronizer_testbench
-# End time: 14:43:45 on Nov 20,2024, Elapsed time: 0:06:33
-# Errors: 0, Warnings: 1
-# vsim -gui -l msim_transcript -voptargs="+acc" rtl_work.handshake_synchronizer_testbench 
-# Start time: 14:43:45 on Nov 20,2024
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
-# Loading sv_std.std
-# Loading work.handshake_synchronizer_testbench(fast)
-# Loading work.handshake_synchronizer(fast)
-# Loading work.sender_fsm(fast)
-# Loading work.receiver_fsm(fast)
-# Loading work.flipflop_synchronizer(fast)
-add wave -position insertpoint sim:/handshake_synchronizer_testbench/DUT/*
-run -all
-vlog -reportprogress 300 -work work C:/projects/systemverilog/ECE11/ProjectPart1/handshake_synchronizer/handshake_synchronizer.sv
-# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
-# Start time: 14:45:47 on Nov 20,2024
-# vlog -reportprogress 300 -work work C:/projects/systemverilog/ECE11/ProjectPart1/handshake_synchronizer/handshake_synchronizer.sv 
-# -- Compiling module handshake_synchronizer
-# 
-# Top level modules:
-# 	handshake_synchronizer
-# End time: 14:45:47 on Nov 20,2024, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vsim -gui -l msim_transcript -voptargs=+acc rtl_work.handshake_synchronizer_testbench
-# End time: 14:45:55 on Nov 20,2024, Elapsed time: 0:02:10
-# Errors: 0, Warnings: 1
-# vsim -gui -l msim_transcript -voptargs="+acc" rtl_work.handshake_synchronizer_testbench 
-# Start time: 14:45:55 on Nov 20,2024
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
-# Loading sv_std.std
-# Loading work.handshake_synchronizer_testbench(fast)
-# Loading work.handshake_synchronizer(fast)
-# Loading work.sender_fsm(fast)
-# Loading work.receiver_fsm(fast)
-# Loading work.flipflop_synchronizer(fast)
-run -all
-add wave -position insertpoint sim:/handshake_synchronizer_testbench/DUT/*
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Note: (vsim-8009) Loading existing optimized design _opt
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
-# Loading work.handshake_synchronizer_testbench(fast)
-# Loading work.handshake_synchronizer(fast)
-# Loading work.sender_fsm(fast)
-# Loading work.receiver_fsm(fast)
-# Loading work.flipflop_synchronizer(fast)
-run -all
-vlog -reportprogress 300 -work work C:/projects/systemverilog/ECE11/ProjectPart1/handshake_synchronizer/handshake_synchronizer.sv
-# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
-# Start time: 14:50:58 on Nov 20,2024
-# vlog -reportprogress 300 -work work C:/projects/systemverilog/ECE11/ProjectPart1/handshake_synchronizer/handshake_synchronizer.sv 
-# -- Compiling module handshake_synchronizer
-# 
-# Top level modules:
-# 	handshake_synchronizer
-# End time: 14:50:58 on Nov 20,2024, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vsim -gui -l msim_transcript -voptargs=+acc rtl_work.handshake_synchronizer_testbench
-# End time: 14:51:06 on Nov 20,2024, Elapsed time: 0:05:11
-# Errors: 0, Warnings: 1
-# vsim -gui -l msim_transcript -voptargs="+acc" rtl_work.handshake_synchronizer_testbench 
-# Start time: 14:51:06 on Nov 20,2024
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
-# Loading sv_std.std
-# Loading work.handshake_synchronizer_testbench(fast)
-# Loading work.handshake_synchronizer(fast)
-# Loading work.sender_fsm(fast)
-# Loading work.receiver_fsm(fast)
-# Loading work.flipflop_synchronizer(fast)
-add wave -position insertpoint sim:/handshake_synchronizer_testbench/DUT/*
-run -all
-vlog -reportprogress 300 -work work C:/projects/systemverilog/ECE11/ProjectPart1/handshake_synchronizer/handshake_synchronizer.sv
-# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
-# Start time: 14:55:38 on Nov 20,2024
-# vlog -reportprogress 300 -work work C:/projects/systemverilog/ECE11/ProjectPart1/handshake_synchronizer/handshake_synchronizer.sv 
-# -- Compiling module handshake_synchronizer
-# 
-# Top level modules:
-# 	handshake_synchronizer
-# End time: 14:55:38 on Nov 20,2024, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work C:/projects/systemverilog/ECE11/ProjectPart1/handshake_synchronizer/handshake_synchronizer.sv
-# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
-# Start time: 14:55:39 on Nov 20,2024
-# vlog -reportprogress 300 -work work C:/projects/systemverilog/ECE11/ProjectPart1/handshake_synchronizer/handshake_synchronizer.sv 
-# -- Compiling module handshake_synchronizer
-# 
-# Top level modules:
-# 	handshake_synchronizer
-# End time: 14:55:39 on Nov 20,2024, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
-# Loading sv_std.std
-# Loading work.handshake_synchronizer_testbench(fast)
-# Loading work.handshake_synchronizer(fast)
-# Loading work.sender_fsm(fast)
-# Loading work.receiver_fsm(fast)
-# Loading work.flipflop_synchronizer(fast)
-run -all
-vlog -reportprogress 300 -work work C:/projects/systemverilog/ECE11/ProjectPart1/handshake_synchronizer/handshake_synchronizer_testbench.sv
-# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
-# Start time: 14:56:41 on Nov 20,2024
-# vlog -reportprogress 300 -work work C:/projects/systemverilog/ECE11/ProjectPart1/handshake_synchronizer/handshake_synchronizer_testbench.sv 
-# -- Compiling module handshake_synchronizer_testbench
-# 
-# Top level modules:
-# 	handshake_synchronizer_testbench
-# End time: 14:56:41 on Nov 20,2024, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work C:/projects/systemverilog/ECE11/ProjectPart1/handshake_synchronizer/handshake_synchronizer.sv
-# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
-# Start time: 14:56:41 on Nov 20,2024
-# vlog -reportprogress 300 -work work C:/projects/systemverilog/ECE11/ProjectPart1/handshake_synchronizer/handshake_synchronizer.sv 
-# -- Compiling module handshake_synchronizer
-# 
-# Top level modules:
-# 	handshake_synchronizer
-# End time: 14:56:41 on Nov 20,2024, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
-# Loading sv_std.std
-# Loading work.handshake_synchronizer_testbench(fast)
-# Loading work.handshake_synchronizer(fast)
-# Loading work.sender_fsm(fast)
-# Loading work.receiver_fsm(fast)
-# Loading work.flipflop_synchronizer(fast)
-run -all
-vlog -reportprogress 300 -work work C:/projects/systemverilog/ECE11/ProjectPart1/handshake_synchronizer/handshake_synchronizer.sv
-# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
-# Start time: 15:02:42 on Nov 20,2024
-# vlog -reportprogress 300 -work work C:/projects/systemverilog/ECE11/ProjectPart1/handshake_synchronizer/handshake_synchronizer.sv 
-# -- Compiling module handshake_synchronizer
-# 
-# Top level modules:
-# 	handshake_synchronizer
-# End time: 15:02:42 on Nov 20,2024, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
-# Loading sv_std.std
-# Loading work.handshake_synchronizer_testbench(fast)
-# Loading work.handshake_synchronizer(fast)
-# Loading work.sender_fsm(fast)
-# Loading work.receiver_fsm(fast)
-# Loading work.flipflop_synchronizer(fast)
-run -all
-# End time: 15:20:16 on Nov 20,2024, Elapsed time: 0:29:10
+# ** Note: $stop    : C:/projects/systemverilog/ECE11/ProjectPart1/handshake_synchronizer/handshake_synchronizer_testbench.sv(115)
+#    Time: 5100 ns  Iteration: 0  Instance: /handshake_synchronizer_testbench
+# Break in Module handshake_synchronizer_testbench at C:/projects/systemverilog/ECE11/ProjectPart1/handshake_synchronizer/handshake_synchronizer_testbench.sv line 115
+# End time: 17:53:17 on Nov 27,2024, Elapsed time: 0:46:13
 # Errors: 0, Warnings: 1

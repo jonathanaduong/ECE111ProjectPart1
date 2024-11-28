@@ -112,6 +112,7 @@ initial begin
 
  // Wait for some time before ending simulation
  #1600;
+ $stop;
 end
 
 endmodule

@@ -1,22 +1,8 @@
 m255
 K4
 z2
-Z0 !s12c _opt
-Z1 !s99 nomlopt
-R0
-R1
-R0
-R1
-R0
-R1
-R0
-R1
-R0
-R1
-R0
-R1
-R0
-R1
+!s12c _opt
+Z0 !s99 nomlopt
 !s11f vlog 2023.3 2023.07, Jul 17 2023
 13
 !s112 1.1
@@ -24,107 +10,109 @@ R1
 !i10e 25
 !i10f 100
 cModel Technology
-Z2 dC:/projects/systemverilog/ECE11/ProjectPart1/handshake_synchronizer/simulation/questa
+Z1 dC:/projects/systemverilog/ECE11/ProjectPart1/handshake_synchronizer/simulation/questa
 T_opt
-!s110 1732143768
-VdWWjM]LKFIj@j>:fP>MZd1
+!s110 1732756025
+V9cnCXK^E_b3=Hz;dTgCAa2
 04 32 4 work handshake_synchronizer_testbench fast 0
-=4-d843ae5fed8e-673e6a98-aa-32b0
-R1
+=1-d843ae5fed8e-6747c238-378-13f8
+R0
 !s12b OEM100
 !s124 OEM10U6 
 o-quiet -auto_acc_if_foreign -work rtl_work +acc
-tCvgOpt 0
+Z2 tCvgOpt 0
 n@_opt
 OL;O;2023.3;77
 vflipflop_synchronizer
 2C:/projects/systemverilog/ECE11/ProjectPart1/handshake_synchronizer/flipflop_synchronizer.sv
 Z3 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
-Z4 !s110 1732142225
+Z4 !s110 1732755982
 !i10b 1
 !s100 ZAX6Wbi5jmM?Q0R1fXJVR3
-I;Rf^acaGIbecWAgE=FfQJ3
+Ic6^Dg=F:KY<]i6hYoQFK^2
 S1
-R2
+R1
 w1732120591
 8C:/projects/systemverilog/ECE11/ProjectPart1/handshake_synchronizer/flipflop_synchronizer.sv
 FC:/projects/systemverilog/ECE11/ProjectPart1/handshake_synchronizer/flipflop_synchronizer.sv
-!i122 13
+!i122 3
 L0 1 24
 Z5 VDg1SIo80bB@j0V0VzS_@n1
 Z6 OL;L;2023.3;77
 r1
 !s85 0
 31
-Z7 !s108 1732142225.000000
+Z7 !s108 1732755982.000000
 !s107 C:/projects/systemverilog/ECE11/ProjectPart1/handshake_synchronizer/flipflop_synchronizer.sv|
-!s90 -F=C:/projects/systemverilog/ECE11/ProjectPart1/handshake_synchronizer/simulation/questa/vlog.opt|-F=|-reportprogress|300|-work|work|C:/projects/systemverilog/ECE11/ProjectPart1/handshake_synchronizer/flipflop_synchronizer.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/projects/systemverilog/ECE11/ProjectPart1/handshake_synchronizer|C:/projects/systemverilog/ECE11/ProjectPart1/handshake_synchronizer/flipflop_synchronizer.sv|
 !i113 0
-Z8 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
-Z9 tSvlog 1 CvgOpt 0
+Z8 o-sv -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z9 !s92 -sv -work work +incdir+C:/projects/systemverilog/ECE11/ProjectPart1/handshake_synchronizer -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
 vhandshake_synchronizer
 2C:/projects/systemverilog/ECE11/ProjectPart1/handshake_synchronizer/handshake_synchronizer.sv
 R3
-!s110 1732143762
+R4
 !i10b 1
 !s100 93S3fn6K4;7]I<UoL5gBk2
-I<lBZ2SzPZmPzad5Z=McQf3
+IDzz@fP^X7fd8ilE>_6R[`3
 S1
-R2
+R1
 w1732143747
 8C:/projects/systemverilog/ECE11/ProjectPart1/handshake_synchronizer/handshake_synchronizer.sv
 FC:/projects/systemverilog/ECE11/ProjectPart1/handshake_synchronizer/handshake_synchronizer.sv
-!i122 21
+!i122 2
 L0 1 82
 R5
 R6
 r1
 !s85 0
 31
-!s108 1732143762.000000
+R7
 !s107 C:/projects/systemverilog/ECE11/ProjectPart1/handshake_synchronizer/handshake_synchronizer.sv|
-!s90 -F=C:/projects/systemverilog/ECE11/ProjectPart1/handshake_synchronizer/simulation/questa/vlog.opt|-F=|-reportprogress|300|-work|work|C:/projects/systemverilog/ECE11/ProjectPart1/handshake_synchronizer/handshake_synchronizer.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/projects/systemverilog/ECE11/ProjectPart1/handshake_synchronizer|C:/projects/systemverilog/ECE11/ProjectPart1/handshake_synchronizer/handshake_synchronizer.sv|
 !i113 0
 R8
 R9
+R2
 vhandshake_synchronizer_testbench
 2C:/projects/systemverilog/ECE11/ProjectPart1/handshake_synchronizer/handshake_synchronizer_testbench.sv
 R3
-!s110 1732143401
+!s110 1732756012
 !i10b 1
-!s100 loU<U8zIIYVoJCKG0>A3K2
-I=8mcMgWzlZghk>n`;j:;a1
+!s100 mZLA=oQ[?lCdo<mIT^CIj2
+IO0LWIhSR5GWI4z8_IF3T70
 S1
-R2
-w1732143395
+R1
+w1732756000
 8C:/projects/systemverilog/ECE11/ProjectPart1/handshake_synchronizer/handshake_synchronizer_testbench.sv
 FC:/projects/systemverilog/ECE11/ProjectPart1/handshake_synchronizer/handshake_synchronizer_testbench.sv
-!i122 19
-L0 2 116
+!i122 5
+L0 2 117
 R5
 R6
 r1
 !s85 0
 31
-!s108 1732143401.000000
+!s108 1732756012.000000
 !s107 C:/projects/systemverilog/ECE11/ProjectPart1/handshake_synchronizer/handshake_synchronizer_testbench.sv|
 !s90 -F=C:/projects/systemverilog/ECE11/ProjectPart1/handshake_synchronizer/simulation/questa/vlog.opt|-F=|-reportprogress|300|-work|work|C:/projects/systemverilog/ECE11/ProjectPart1/handshake_synchronizer/handshake_synchronizer_testbench.sv|
 !i113 0
-R8
-R9
+o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+tSvlog 1 CvgOpt 0
 vreceiver_fsm
 2C:/projects/systemverilog/ECE11/ProjectPart1/handshake_synchronizer/receiver_fsm.sv
 R3
 R4
 !i10b 1
 !s100 4o[hYkReI][66Q0e6gWDz2
-IM=EQhzC5JP^k=;dAdj@B01
+IIT3aMOXzdTTaWCVe@0nVP0
 S1
-R2
+R1
 w1732142184
 8C:/projects/systemverilog/ECE11/ProjectPart1/handshake_synchronizer/receiver_fsm.sv
 FC:/projects/systemverilog/ECE11/ProjectPart1/handshake_synchronizer/receiver_fsm.sv
-!i122 10
+!i122 1
 L0 2 60
 R5
 R6
@@ -133,23 +121,24 @@ r1
 31
 R7
 !s107 C:/projects/systemverilog/ECE11/ProjectPart1/handshake_synchronizer/receiver_fsm.sv|
-!s90 -F=C:/projects/systemverilog/ECE11/ProjectPart1/handshake_synchronizer/simulation/questa/vlog.opt|-F=|-reportprogress|300|-work|work|C:/projects/systemverilog/ECE11/ProjectPart1/handshake_synchronizer/receiver_fsm.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/projects/systemverilog/ECE11/ProjectPart1/handshake_synchronizer|C:/projects/systemverilog/ECE11/ProjectPart1/handshake_synchronizer/receiver_fsm.sv|
 !i113 0
 R8
 R9
+R2
 vsender_fsm
 2C:/projects/systemverilog/ECE11/ProjectPart1/handshake_synchronizer/sender_fsm.sv
 R3
 R4
 !i10b 1
 !s100 IlHX6UGVe8C@_dZ[_XFCe3
-Il6cmA0n@j9=]dMEoBaK:70
+IO7[inWiF?AcEOf5FTc:FS1
 S1
-R2
+R1
 w1732142143
 8C:/projects/systemverilog/ECE11/ProjectPart1/handshake_synchronizer/sender_fsm.sv
 FC:/projects/systemverilog/ECE11/ProjectPart1/handshake_synchronizer/sender_fsm.sv
-!i122 11
+!i122 0
 L0 2 84
 R5
 R6
@@ -158,7 +147,8 @@ r1
 31
 R7
 !s107 C:/projects/systemverilog/ECE11/ProjectPart1/handshake_synchronizer/sender_fsm.sv|
-!s90 -F=C:/projects/systemverilog/ECE11/ProjectPart1/handshake_synchronizer/simulation/questa/vlog.opt|-F=|-reportprogress|300|-work|work|C:/projects/systemverilog/ECE11/ProjectPart1/handshake_synchronizer/sender_fsm.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/projects/systemverilog/ECE11/ProjectPart1/handshake_synchronizer|C:/projects/systemverilog/ECE11/ProjectPart1/handshake_synchronizer/sender_fsm.sv|
 !i113 0
 R8
 R9
+R2
